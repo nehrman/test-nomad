@@ -1,3 +1,4 @@
+# This Python file uses the following encoding: utf-8
 import http.server
 import socketserver
 import os
