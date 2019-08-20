@@ -13,6 +13,6 @@ class MyHTTPRequestHandler(http.server.SimpleHTTPRequestHandler):
         self.send_header("Pragma", "no-cache")
         self.send_header("Expires", "0")
 
-with socketserver.TCPServer((os.environ['NOMAD_IP_toto'], int(os.environ['NOMAD_PORT_toto']), os.environ['NOMAD_ALLOC_NAME'])), MyHTTPRequestHandler) as httpd:
+with socketserver.TCPServer((os.environ['NOMAD_IP_toto'], int(os.environ['NOMAD_PORT_toto']))), MyHTTPRequestHandler) as httpd:
     httpd.serve_forever()
 
